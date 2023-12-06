@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lobe.ai/blog/machine-learning-kit-with-adafruit</title>
+    <link rel="stylesheet" href="example.css">
+    <link rel="stylesheet" href="font-awesome/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+
+        <header>
+
+            <img src="img/logo.svg" alt="logo" id="blogo">
+
+            <nav>
+                <ul class="nav-ul">
+                    <a href="Index.html"><li class="list1">Overview</li></a>
+                    <a href=""><li class="active">Examples</li></a>
+                    <a href="tour.html"><li class="list1">Tour</li></a>
+                   <a href="blog.html"> <li class="list1">Blog</li></a>
+                   <a href="help.html"> <li class="list1">Help</li></a>
+
+                   <button class="button1" id="btndown">Download</button>
+                </ul>
+                <div class="burger" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+                 
+            </nav>
+
+        </header>
+
+        <div class="subsect">
+            <h2 class="projectUse3">Four New </h2>
+            <h2 class="projectUse4"><span class="spanUse2">Features</span> in Lobe</h2>
+            <h4 class="lobeUse">December 10, 2020</h4>
+        </div>
+
+        <div class="main-section">
+
+            <img src="img/Release 2.jpg" alt="" class="cent-img">
+            <p class="p-contents">Today we are excited to introduce a new version of Lobe that will open a new range of possibilities and projects that can be built with machine learning. This new update introduces four major improvements—the ability to select which camera you want to use in Lobe, new export formats, accelerated GPU training, and performance improvements throughout the app.</p>
+            <p class="p-contents">One of our biggest ambitions while building Lobe is to spark creativity in everyone to find new ways to use machine learning to solve problems and automate tasks. This new version of Lobe is a major step towards making machine learning easier to use.</p>
+           
+            <h1 class="h1-contents">Camera Selection</h1>
+            <p class="p-contents">When we <u>launched Lobe in October,</u> we focused on making data collection and labeling as easy as possible. We simplified one of the most tedious processes of crafting a machine learning model and made it as easy as the click of a button to quickly collect and label bursts of images.</p>
+            <p class="p-contents">However, data collection happens in more places than just in front of your computer. And that’s why today, we are adding the ability to select any connected camera right inside Lobe, making data collection more seamless than ever. Now you can take advantage of Lobe’s built-in functionality and combine it with the best camera source for your project, whether that’s an external webcam, a microscope, or even a virtual camera.</p>
+
+            <img src="img/Camera Sources.jpg" alt="" class="cent-img">
+            <h6 class="h6-contents3">The ability to use any camera source in Lobe opens a new range of possibilities.</h6>
+            <p class="p-contents">One of our favorite features in Lobe is the ability to try out your model right inside the app using the Play tab. Being able to use different cameras will make testing your model better by allowing you to use the same camera you used to collect your images.</p>
+            <p class="p-contents">The ability to select the camera you want to use will open a whole new range of possibilities and machine learning models you can create with Lobe. Check out our post where you can learn more about using camera sources in Lobe and get ideas for your project.</p>
+
+            <h1 class="h1-contents">New Export Formats</h1>
+            <p class="p-contents">Building a machine learning model is just the first step when you are solving a problem, prototyping an idea, or even just learning. The next step is to export your model and use it in your app.</p>
+            <p class="p-contents">Lobe was designed as a universal app from the ground up, so whether you are on a Mac or PC, you can use it to build machine learning models. Exporting your model should not be tied to a specific platform either, and that is why we are excited to expand Lobe’s export capabilities to include TensorFlow.js and ONNX. This is added to our already available export formats—CoreML, TensorFlow, TensorFlow Lite, and our local Lobe API.</p>
+
+            <img src="img/Models.jpg" alt="" class="cent-img">
+            <h6 class="h6-contents3">CoreML, Local API, Tensor Flow.js, TensorFlow Lite, ONNX, and TensorFlow.</h6>
+            <p class="p-contents">In the end, a machine learning model is ultimately used to solve a problem or automate a task, making our lives easier. Because of that, a model needs to be adaptable, performant, and easy to integrate. With the addition of these export formats, Lobe makes it easier to deploy a model on any device, whether it’s a phone, a Raspberry Pi, a website, or even a server.</p>            
+
+            <h1 class="h1-contents">Accelerated GPU Training</h1>
+            <p class="p-contents">Training a machine learning model is at the core of the Lobe experience, and we strive to make it as seamless as possible. That’s why we designed Lobe to automatically and continuously train in the background, so you can focus on improving your dataset, evaluating your model’s results, and testing it out.</p>
+            <p class="p-contents">To make Lobe even more seamless, this new update adds GPU acceleration, making training faster and more efficient. This will allow training to recede to the background even more, making the overall experience of building a model more enjoyable. Accelerated GPU training is available on Windows, with macOS coming soon. To learn more about the GPU accelerated training investments we’re leveraging from DirectML, check out this post.</p>
+
+            <img src="img/Training.jpg" alt="" class="cent-img">
+            <h6 class="h6-contents3">Lobe will leverage your computer’s GPU to train even faster.</h6>
+            <h1 class="h1-content">Improved Performance</h1>
+            <p class="p-contents">There is a lot of work happening behind the scenes when you train a machine learning model in Lobe. Hundreds of thousands of iterations are happening in real-time, continuously tuning your model’s neural network to better understand your images.</p>
+            <p class="p-contents">However, that complex process shouldn’t stop Lobe from remaining fast, responsive, and smooth at all times. In this new update, Lobe is faster and runs smoother in areas like scrolling, animating, and reacting to your interactions.</p>
+
+            <img src="img/Performance.jpg" alt="" class="cent-img">
+            <h6 class="h6-contents3">Lobe is more responsive, and scrolling is now twice as smooth.</h6>
+            <h1 class="h1-content">Sparking Creativity</h1>
+            <p class="p-contents">Sparking creativity is one of our core beliefs and ambitions and helping you solve problems with machine learning is part of our mission. By making Lobe faster, more performant, and expanding its capabilities with more export formats and camera sources, we strive to open a whole new range of possibilities for you and your machine learning projects.</p>
+            <p class="p-contents">This release also includes a bunch of small improvements, bug fixes, and adjustments that streamline the experience of building a machine learning model, so the app can recede to the background, be transparent, and become the bridge between your project and your ideas.</p>
+            <p class="p-contents">We can’t wait to see what you do with this new version of Lobe. Download it for free to get started on your machine learning model today. And join the community to share your feedback and see what others are building.</p>
+
+            <h1 class="h1-content">Share Article</h1>
+
+            <div class="footer-icons">
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-envelope"></i>
+            </div>
+
+            <hr class="horizontal">
+        </div>
+
+        <div class="sect4">
+            <h1 class="project4">Train your app with Lobe</h1>
+            <button class="dwnload">Download</button>
+            <hr>
+
+            <div class="footwords">
+
+                <div class="lobe">
+                    <img src="img/logo.svg" alt="" id="blogo">
+                    <div class="list">
+                        <li>A product by Microsoft.</li>
+                        <li>All rights reserved.</li> 
+                        <li>© Microsoft 2021</li>
+                    </div>
+                </div>
+
+                <div class="about1">
+                    <h5 class="aboutsect">About</h5>
+
+                    <div class="lists">
+                        <li>Download</li>
+                        <li>Overview</li>
+                        <li>Examples</li>
+                        <li>Blog</li>
+                    
+                    </div>
+                </div>
+
+                <div class="general">
+                    <h5 class="aboutsect">General</h5>
+                    <li>Notice</li>
+                    <li>Licence</li>
+                    <li>Press Inquiry</li>
+                    <li>Press</li>
+                </div>
+                
+                <div class="resource">
+                    <h5 class="aboutsect">Resources</h5>
+                    <li>Help</li>
+                    <li>Tour</li>
+                    <li>Contact</li>
+                    <li>Privacy</li>
+                </div>
+
+                <div class="socialicons">
+                    <i class="fa fa-comment"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-youtube-play"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="Index.js"></script>    
+</body>
+</html>

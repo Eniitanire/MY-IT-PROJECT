@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>https://www.lobe.ai/docs/train/train</title>
+    <link rel="stylesheet" href="example.css">
+    <link rel="stylesheet" href="font-awesome/font-awesome.min.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <header>
+            <img src="img/logo.svg" alt="logo" id="blogo">
+
+            <nav>
+                <ul class="nav-ul">
+                    <a href="Index.html"><li class="list1">Overview</li></a>
+                    <a href=""><li class="active">Examples</li></a>
+                    <a href="tour.html"><li class="list1">Tour</li></a>
+                   <a href="blog.html"> <li class="list1">Blog</li></a>
+                   <a href="help.html"> <li class="list1">Help</li></a>
+
+                   <button class="button1" id="btndown">Download</button>
+                </ul>
+                <div class="burger" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+                 
+            </nav>
+
+        </header>
+
+        <div class="subsect">
+            <h2 class="projects5">Lobe <span class="span5">Help</span></h2>
+            <h4 class="lobes5">Everything you need to know to train great machine learning models with Lobe.</h4>
+        </div>
+
+        <div class="container">
+            <div class="help-contents">
+
+                <div class="listcontent1">
+                    <div class="listings">
+
+                        <div class="listofitems">
+                            <p id="section1" class="sections">Welcome</p>
+                            <p id="section2" class="sections">Label</p>
+                            <p id="section3" class="sections">Train</p>
+                            <p id="section4" class="sections">Results</p>
+                            <p id="section5" class="sections">Play</p>
+                            <p id="section6" class="sections">Export</p>
+                            <p id="section7" class="sections">Improving</p>
+                            <p id="section8" class="sections">Tips</p>
+                        </div>
+                    </div>
+
+                    <div class="listings2">
+                        <p id="section4" class="sections">Community</p>
+                        <p id="section5" class="sections">Lobe Tours</p>
+                        <p id="section6" class="sections">Examples</p>
+                        <p id="section7" class="sections">Contact Us</p>
+                    </div>
+
+                </div>
+
+                <div class="helpwords">
+
+                    <div class="lobediv">
+
+                        <p class="lobecontents">How can I learn more about Lobe?</p>
+
+                        <div class="section">
+                            <i class="fa fa-angle-down" onclick="toggleContent('content1', this)"></i>
+                            <div id="content1" class="content">
+                                <p>Labeling is assigning categories to your images to create examples that teach Lobe. These examples are commonly known as a dataset. From this dataset, Lobe will learn to automatically predict a label for a given image.</p>
+
+                            </div>
+                        </div>
+
+                    </div> <br>
+                    <hr class="p-horizontal">
+
+                    <div class="lobediv">
+
+                        <p class="lobecontents">What keyboard shortcuts are supported?</p>
+
+                        <div class="section">
+                            <i class="fa fa-angle-down" onclick="toggleContent('content2', this)"></i>
+                            <div id="content2" class="content">
+                               <b> <p>Import and label your images in Lobe.</p></b>
+
+                                <div class="p-divs">
+
+                                    <i class="fa fa-check"></i>                                    
+                                    <h5 class="mini-sect2"><b>Images</b> - import common image files directly from your computer. Lobe supports JPEG, PNG, BMP, and WebP formats.</h5>
+                                </div>
+
+                                <div class="p-divs">
+
+                                    <i class="fa fa-check"></i>                                    
+                                    <h5 class="mini-sect2"><b>Camera</b> - use any connected camera source to capture images directly in Lobe. You can optionally provide a label for these images. Hold down the camera button to capture a burst of images.</h5> 
+                                </div>
+
+                                <b><p class="import">Import an existing dataset.</p></b>
+
+                                <div class="p-divs">
+
+                                    <i class="fa fa-check"></i>                                    
+                                    <h5 class="mini-sect2"><b>Folders </b> - import existing labeled images by using folder names as the labels.</h5>
+                                </div>
+                                <h5 class="mini-sect3">You can create new labels or edit existing ones by using the text box in the bottom corner of each image.</h5>
+                                <h5 class="mini-sect3"><em>Note</em></h5>
+                                <div class="p-divs">
+
+                                    <i class="fa fa-check"></i>                                    
+                                    <h5 class="mini-sect2">The max image size Lobe can process is 178,956,970 pixels. For a square image, that is about 13,300 x 13,300 pixels. We recommend staying lower-resolution for faster processing because Lobe will resize and crop your image to a 224 x 224 square.</h5> 
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+
+                    </div> <br>
+                    <hr class="p-horizontal">
+
+                    <div class="lobediv">
+
+                        <p class="lobecontents">Why is my computer running slowly during training?</p>
+
+                        <div class="section">
+                            <i class="fa fa-angle-down" onclick="toggleContent('content3', this)"></i>
+                            <div id="content3" class="content">
+                                <b><p class="import">Collect images that you expect to see in the real world.</p></b>
+                                <h5 class="mini-sect">Lobe can only learn the patterns that exist in the images you provide as examples. Collect images from the same source you expect to use with your exported model.</h5>
+                            </div>
+                        </div>
+
+                    </div> <br>
+                    <hr class="p-horizontal">
+
+                    <div class="lobediv">
+
+                        <p class="lobecontents">Does Lobe use the GPU for training?</p>
+
+                        <div class="section">
+                            <i class="fa fa-angle-down" onclick="toggleContent('content4', this)"></i>
+                            <div id="content4" class="content">
+                                <p class="imgg">Image classification is categorizing an image into a single label to represent its content. Apps using image classification could:</p>
+
+                                <div class="p-divs">
+
+                                    <i class="fa fa-check"></i>                                    
+                                    <h5 class="mini1">Tell you when someone is coming up your front steps</h5>
+                                    
+                                </div>
+
+                                <div class="p-divs">
+
+                                    <i class="fa fa-check"></i>                                    
+                                    <h5 class="mini1">Send you photos of a new bird that just started showing up at your bird feeder</h5>
+                                    
+                                </div>
+
+                                <div class="p-divs">
+
+                                    <i class="fa fa-check"></i>                                    
+                                    <h5 class="mini1">Count the number of push-ups you’ve done in a workout</h5> 
+                                    
+                                </div>
+
+                                <div class="p-divs">
+
+                                    <i class="fa fa-check"></i>                                    
+                                    <h5 class="mini1">Alert you when a shelf is empty</h5>
+                                    
+                                </div>
+
+                                <div class="p-divs">
+
+                                    <i class="fa fa-check"></i>                                    
+                                    <h5 class="mini1">Read signs in you environment</h5>
+                                    
+                                </div>
+
+                                <p class="imgg">Lobe is not doing any reasoning or understanding of the content in your images. Image classification learns to find any patterns from your images - things like textures, colors, and shapes - that can be used to separate your labels.</p>
+                            </div>
+                        </div>
+
+                    </div> <br>
+                    <hr class="p-horizontal">
+
+                    <div class="lobediv">
+
+                        <p class="lobecontents">Why is Lobe running slow?</p>
+
+                        <div class="section">
+                            <i class="fa fa-angle-down" onclick="toggleContent('content5', this)"></i>
+                            <div id="content5" class="content">
+                                <p class="imgg">A model is a piece of code. You can export your model into a variety of industry-standard formats to run on Mac and Windows, the web, or mobile and edge devices. You can also export and use your model in Power Platform. See our GitHub for sample projects and other tools for working with Lobe. We are also working on a collection of apps and integrations to help run your model without any code.</p>
+                            </div>
+                        </div>
+
+                    </div> <br>
+                    <hr class="p-horizontal">
+
+                    <div class="lobediv">
+
+                        <p class="lobecontents">What are the system requirements? </p>
+
+                        <div class="section">
+                            <i class="fa fa-angle-down" onclick="toggleContent('content6', this)"></i>
+                            <div id="content6" class="content">
+                                
+                                <b><p class="min">Minimum Specs</p></b>
+                                <table style="width: 100%;">
+                                    <tr class="third-row">
+                                        <th></th>
+                                        <th>Mac</th>
+                                        <th>Windows</th>
+                                    </tr>
+
+                                    <tr class="first-row">
+                                        <td>OS</td>
+                                        <td>Mac OS X Mojave 10.14 or later</td>
+                                        <td>Windows 10 version 1607 or later</td>
+                                    </tr>
+
+                                    <tr class="second-row">
+                                        <td>CPU</td>
+                                        <td>Apple M1 processor is not yet supported</td>
+                                        <td>Intel Core i3 processor or
+                                            later that's SSE2 capable
+                                            and supports the AVX instruction set
+                                            (no Celeron or Pentium processors)
+                                        </td>
+                                    </tr> 
+
+                                    <tr class="third-row">
+                                        <td>RAM</td>
+                                        <td>4GB RAM</td>
+                                        <td>4GB RAM</td>
+                                    </tr> 
+
+                                    <tr class="fourth-row">
+                                        <td>Disk</td>
+                                        <td>2GB free disk space</td>
+                                        <td>2GB free disk space</td>
+                                    </tr> 
+
+                                    <tr class="first-row">
+                                        <td>Examples</td>
+                                        <td>Mid-2013 Macbook Air</td>
+                                        <td>Lenovo ThinkPad X1 (2012)</td>
+                                    </tr> 
+
+                               </table>
+
+                               <b><p class="min">Minimum Specs</p></b>
+                               <table style="width: 100%;">
+                                   <tr class="third-row">
+                                       <th></th>
+                                       <th>Mac</th>
+                                       <th>Windows</th>
+                                   </tr>
+
+                                   <tr class="first-row">
+                                       <td>OS</td>
+                                       <td>Mac OS X Mojave 10.14 or later</td>
+                                       <td>Windows 10 version 1607 or later</td>
+                                   </tr>
+
+                                   <tr class="second-row">
+                                       <td>CPU</td>
+                                       <td>Apple M1 processor is not yet supported</td>
+                                       <td>Intel Core i3 processor or
+                                           later that's SSE2 capable
+                                           and supports the AVX instruction set
+                                           (no Celeron or Pentium processors)
+                                       </td>
+                                   </tr> 
+
+                                   <tr class="third-row">
+                                       <td>RAM</td>
+                                       <td>4GB RAM</td>
+                                       <td>4GB RAM</td>
+                                   </tr> 
+
+                                   <tr class="fourth-row">
+                                       <td>Disk</td>
+                                       <td>2GB free disk space</td>
+                                       <td>2GB free disk space</td>
+                                   </tr> 
+
+                                   <tr class="first-row">
+                                       <td>Examples</td>
+                                       <td>Mid-2013 Macbook Air</td>
+                                       <td>Lenovo ThinkPad X1 (2012)</td>
+                                   </tr> 
+
+                              </table>
+                            </div>
+                        </div>
+
+                    </div> <br>
+                    <hr class="p-horizontal">
+
+                    <div class="lobediv">
+
+                        <p class="lobecontents">How can I create a new version or keep track of progress? </p>
+
+                        <div class="section">
+                            <i class="fa fa-angle-down" onclick="toggleContent('content7', this)"></i>
+                            <div id="content7" class="content">
+                                <p class="imgg">No machine learning knowledge is necessary. Lobe follows best practices while automatically building and training a model for you.</p>
+                            </div>
+                        </div>
+
+                    </div> <br>
+                    <hr class="p-horizontal">
+
+                    <div class="lobediv">
+
+                        <p class="lobecontents">Why are tall or wide images not performing well? </p>
+
+                        <div class="section">
+                            <i class="fa fa-angle-down" onclick="toggleContent('content8', this)"></i>
+                            <div id="content8" class="content">
+                                <p class="imgg">No machine learning knowledge is necessary. Lobe follows best practices while automatically building and training a model for you.</p>
+                            </div>
+                        </div>
+
+                    </div> <br>
+                    <hr class="p-horizontal">
+
+                    <div class="lobediv">
+
+                        <div class="p-div-content">
+
+                            <i class="fa fa-comment"></i>                                    
+                            <a href=""><h5 class="mini-sect1">Ask a question in the lobe community</h5></a> 
+                            
+                        </div>
+
+                        <div class="section">
+                            <i class="fa fa-angle-right" onclick="toggleContent('content9', this)"></i>
+                            <div id="content9" class="content">
+                                <p class="imgg">Yes, all of your images and models stay private on your computer. Lobe runs and trains machine learning models entirely on your own device. Your project images and models are never uploaded to the cloud or visible to us.</p>
+                            </div>
+                        </div>
+
+                    </div> <br>
+                    <hr class="p-horizontal">
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="sect4">
+            <h1 class="project4">Train your app with Lobe</h1>
+            <button class="dwnload">Download</button>
+            <hr>
+
+            <div class="footwords">
+
+                <div class="lobe">
+                    <img src="img/logo.svg" alt="" id="blogo">
+                    <div class="list">
+                        <li>A product by Microsoft.</li>
+                        <li>All rights reserved.</li> 
+                        <li>© Microsoft 2021</li>
+                    </div>
+                </div>
+
+                <div class="about1">
+                    <h5 class="aboutsect">About</h5>
+
+                    <div class="lists">
+                        <li>Download</li>
+                        <li>Overview</li>
+                        <li>Examples</li>
+                        <li>Blog</li>
+                    
+                    </div>
+                </div>
+
+                <div class="general">
+                    <h5 class="aboutsect">General</h5>
+                    <li>Notice</li>
+                    <li>Licence</li>
+                    <li>Press Inquiry</li>
+                    <li>Press</li>
+                </div>
+                
+                <div class="resource">
+                    <h5 class="aboutsect">Resources</h5>
+                    <li>Help</li>
+                    <li>Tour</li>
+                    <li>Contact</li>
+                    <li>Privacy</li>
+                </div>
+
+                <div class="socialicons">
+                    <i class="fa fa-comment"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-youtube-play"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   
+    <script src="Index.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>https://www.lobe.ai/blog/using-your-model-101</title>
+    <link rel="stylesheet" href="example.css">
+    <link rel="stylesheet" href="font-awesome/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+
+        <header>
+
+            <img src="img/logo.svg" alt="logo" id="blogo">
+
+            <nav>
+                <ul class="nav-ul">
+                    <a href="Index.html"><li class="list1">Overview</li></a>
+                    <a href=""><li class="active">Examples</li></a>
+                    <a href="tour.html"><li class="list1">Tour</li></a>
+                   <a href="blog.html"> <li class="list1">Blog</li></a>
+                   <a href="help.html"> <li class="list1">Help</li></a>
+
+                   <button class="button1" id="btndown">Download</button>
+                </ul>
+                <div class="burger" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+                 
+            </nav>
+
+        </header>
+
+        <div class="subsect">
+            <h2 class="projectUse2">Use your model in <span class="spanUse1">101</span></h2>
+            <h4 class="lobeUse">March 23, 2021
+            </h4>
+        </div>
+
+        <div class="main-section">
+
+            <img src="img/March Release Bison.jpg" alt="" class="cent-img">
+            <p class="p-contents">The common reason for creating a machine learning model is to automate or accomplish a task that was too tedious to complete in traditional programming. That means after using Lobe to label, train, and play with your model, the next step is to export it and use it in the real world. The possibilities are endless. This article defines what a model is, explains when to use each type of export, outlines our starter projects, and explains the new Lobe Connect.</p>
+
+            <h1 class="h1-contents">Models and Model Files</h1>
+            <p class="p-contents">Machine learning models are a collection of files that other programs can load to get a prediction from the set of labels you trained with. These files store both the structure and the weights of the neural network that Lobe automatically trains for you. Because of its universal architecture, a model can be exported and used in almost any software imaginable.</p>
+            <p class="p-contents">For instance, you can host your model within your app without the need to connect to a server. You can also host your model in any of the major cloud platforms like Azure and use it with an API. You can run your model on an edge device such as a Raspberry Pi. And you can also host your model within Lobe and use our local API called Lobe Connect to help kickstart your app development.</p>
+
+            <h1 class="h1-contents">Model Files</h1>
+            <p class="p-contents">When you are building custom software, use the model file that fits your platform and project. Typically, model files are optimized for specific platforms and use-cases. Lobe currently supports five different model files: TensorFlow, TensorFlow Lite, TensorFlow.js, CoreML, and ONNX.</p>
+
+            <h1 class="h1-contents2">TensorFlow</h1>
+            <p class="p-contents">This is a full-sized model for when you can handle the size and performance needs and you want the best accuracy possible. TensorFlow is very widely used and there is significant support for writing apps in Python and many other languages, and for hosting models in cloud services like Azure, Google Cloud, and AWS.</p>
+
+            <h1 class="h1-contents2">TensorFlow Lite</h1>
+            <p class="p-contents">TensorFlow Lite models are fast and small, but less accurate than full TensorFlow models, making them well suited for devices with less processing power than a normal desktop computer. TensorFlow Lite is recommended for Android and universal mobile apps, as well as IoT applications.</p>
+
+            <h1 class="h1-contents2">TensorFlow.js</h1>
+            <p class="p-contents">These models are built specifically for use with JavaScript on browsers and in Node and can take advantage of WebGL acceleration on some devices.</p>
+
+            <h1 class="h1-contents2">Core ML</h1>
+            <p class="p-contents">Created by Apple, Core ML is a model file that’s been optimized to run on Apple devices. It’s ideal for apps that will only run on iOS, iPadOS or macOS.</p>
+
+            <h1 class="h1-contents2">ONNX</h1>
+            <p class="p-contents">Like TensorFlow, ONNX has broad support on multiple platforms. Export an ONNX model for cross-compatible applications, including edge devices.</p>
+
+            <img src="img/March Release Cards 3.jpg" alt="" class="cent-imgs">
+            <h6 class="h6-contents">The export cards for all the starter projects you’ll find in Lobe.</h6>
+            <h1 class="h1-contents">Starter Projects</h1>
+            <p class="p-contents">If you don’t know exactly how to integrate a model with an app, or you want to test your model first before integrating it with the project you are building, our starter projects are a great way to get started. Just follow the README, export the indicated model file, and move it to the starter project you are using. We currently have four supported starter projects in our GitHub, including an iOS app, an Android app, a REST server, and a Web app. Let us know what else you’d like to see here!</p>
+
+            <h1 class="h1-contents2">iOS and Android apps</h1>
+            <p class="p-contents">The <u>iOS App project</u> is written with Swift UI and uses a Core ML model to run its predictions. The app uses a live camera and shows the top three predictions . Additionally, you can also use images from your gallery.</p>
+            <p class="p-contents">The <u> Android App</u> is similar to the iOS App, but it’s written in Kotlin and uses TensorFlow Lite.</p>
+
+            <h1 class="h1-contents2">REST Server</h1>
+            <p class="p-contents">This <u>Flask server</u> exposes a REST API that uses a TensorFlow model to run its predictions. It can be used in any cloud provider, such as Azure, AWS or Google Cloud.</p>
+
+            <h1 class="h1-contents2">Web App</h1>
+            <p class="p-contents">Running your model on a website is fun and accessible to people around the world. The <u>Web App Starter</u> is written in React and uses a TensorFlow.js model to show the top three predictions.</p>
+
+
+            <img src="img/March Release Starters.jpg" alt="" class="cent-img">
+            <h6 class="h6-contents">The iOS starter project shows the top three predictions of your model.</h6>
+            <h1 class="h1-contents">Lobe Connect</h1>
+            <p class="p-contents">Lobe automatically hosts a local REST API. This makes it really handy to test your app locally without having to fully integrate it yet, while getting predictions back from the current model. To connect Lobe and your project, make a POST request with a base64 image to the unique URL that Lobe creates for your project. This will return the prediction results from your model with the labels and confidences.</p>
+            <p class="p-contents">To get started with Lobe Connect, we’ve prepared easy-to-use code snippets in several popular programming languages. Just click Lobe Connect in the Use tab to get started integrating your model.</p>
+
+            <img src="img/March Release Connect.jpg" alt="" class="cent-img">
+            <h6 class="h6-contents">Connect your model with your app using the Lobe Connect card in the Use tab.</h6>
+            <h1 class="h1-contents">Get Started Today</h1>
+            <p class="p-contents">It can feel daunting to export and use your model, because of the many possibilities there are. However, ask yourself whether you have an app yet, what type of app you want to build, and if you want to get started with our sample projects or not.</p>
+            <p class="p-contents">We can’t wait to see what you do with this new version of Lobe. Download it for free to get started on your machine learning model today. And join the community to share your feedback and see what others are building.</p>
+            
+            
+            <h1 class="h1-content">Share Article</h1>
+
+            <div class="footer-icons">
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-envelope"></i>
+            </div>
+
+            <hr class="horizontal">
+        </div>
+
+        <div class="sect4">
+            <h1 class="project4">Train your app with Lobe</h1>
+            <button class="dwnload">Download</button>
+            <hr>
+
+            <div class="footwords">
+
+                <div class="lobe">
+                    <img src="img/logo.svg" alt="" id="blogo">
+                    <div class="list">
+                        <li>A product by Microsoft.</li>
+                        <li>All rights reserved.</li> 
+                        <li>© Microsoft 2021</li>
+                    </div>
+                </div>
+
+                <div class="about1">
+                    <h5 class="aboutsect">About</h5>
+
+                    <div class="lists">
+                        <li>Download</li>
+                        <li>Overview</li>
+                        <li>Examples</li>
+                        <li>Blog</li>
+                    
+                    </div>
+                </div>
+
+                <div class="general">
+                    <h5 class="aboutsect">General</h5>
+                    <li>Notice</li>
+                    <li>Licence</li>
+                    <li>Press Inquiry</li>
+                    <li>Press</li>
+                </div>
+                
+                <div class="resource">
+                    <h5 class="aboutsect">Resources</h5>
+                    <li>Help</li>
+                    <li>Tour</li>
+                    <li>Contact</li>
+                    <li>Privacy</li>
+                </div>
+
+                <div class="socialicons">
+                    <i class="fa fa-comment"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-youtube-play"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="Index.js"></script>    
+</body>
+</html>
